@@ -54,7 +54,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-Loan_Department" class="navigator-link ">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,7 +102,7 @@
                     <div class="method-list-content passed suite-Loan_Department">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Loan_Department" title="testpackage.xmlfile" class="method navigator-link" hash-for-method="demo">demo</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Loan_Department" title="testpackage.Prioritizingexample" class="method navigator-link" hash-for-method="APIlogin">APIlogin</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -113,6 +113,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Loan_Department" title="testpackage.xmlfile" class="method navigator-link" hash-for-method="seconddemo">seconddemo</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Loan_Department" title="testpackage.Prioritizingexample" class="method navigator-link" hash-for-method="webloginloan">webloginloan</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Loan_Department -->
@@ -127,6 +132,21 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Loan_Department" class="panel Loan_Department">
+          <div class="suite-Loan_Department-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testpackage.xmlfile</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="seconddemo">
+                  </a> <!-- seconddemo -->
+                  <span class="method-name">seconddemo</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Loan_Department-class-passed -->
           <div class="suite-Loan_Department-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -145,21 +165,21 @@
           <div class="suite-Loan_Department-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">testpackage.xmlfile</span>
+              <span class="class-name">testpackage.Prioritizingexample</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="demo">
-                  </a> <!-- demo -->
-                  <span class="method-name">demo</span>
+                  <a name="APIlogin">
+                  </a> <!-- APIlogin -->
+                  <span class="method-name">APIlogin</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="seconddemo">
-                  </a> <!-- seconddemo -->
-                  <span class="method-name">seconddemo</span>
+                  <a name="webloginloan">
+                  </a> <!-- webloginloan -->
+                  <span class="method-name">webloginloan</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -167,17 +187,30 @@
         </div> <!-- panel Loan_Department -->
         <div panel-name="test-xml-Loan_Department" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/Users/yuvarajk/eclipse-workspace/Testngexample/testng.xml</span>
+            <span class="header-content">/Users/yuvarajk/git/testng/Testngexample/testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Loan Department&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Personal loan&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot; loan&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;testpackage.Basic&quot;/&gt;
-      &lt;class name=&quot;testpackage.xmlfile&quot;/&gt;
+      &lt;class name=&quot;testpackage.xmlfile&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;seconddemo&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- testpackage.xmlfile --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!--  loan --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Personal loan&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testpackage.Prioritizingexample&quot;&gt;
+        &lt;methods&gt;
+          &lt;exclude name=&quot;mobilel.*&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- testpackage.Prioritizingexample --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Personal loan --&gt;
 &lt;/suite&gt; &lt;!-- Loan Department --&gt;
@@ -191,7 +224,10 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Personal loan (2 classes)</span>
+                <span class="test-name"> loan (2 classes)</span>
+              </li>
+              <li>
+                <span class="test-name">Personal loan (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -217,24 +253,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'demo')
 data.setCell(0, 2, 'testpackage.Basic')
-data.setCell(0, 3, 9);
+data.setCell(0, 3, 15);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'demo')
+data.setCell(1, 1, 'seconddemo')
 data.setCell(1, 2, 'testpackage.xmlfile')
-data.setCell(1, 3, 2);
+data.setCell(1, 3, 4);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'seconddemo')
-data.setCell(2, 2, 'testpackage.xmlfile')
+data.setCell(2, 1, 'APIlogin')
+data.setCell(2, 2, 'testpackage.Prioritizingexample')
 data.setCell(2, 3, 1);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'webloginloan')
+data.setCell(3, 2, 'testpackage.Prioritizingexample')
+data.setCell(3, 3, 0);
 window.suiteTableData['Loan_Department']= { tableData: data, tableDiv: 'times-div-Loan_Department'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 12 ms</span>
+              <span class="suite-total-time">Total running time: 20 ms</span>
               <div id="times-div-Loan_Department">
               </div> <!-- times-div-Loan_Department -->
             </div> <!-- times-div -->
@@ -249,9 +289,27 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Loan_Department" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">4 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">testpackage.xmlfile</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">demo</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">testpackage.Prioritizingexample</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">mobileloginloan2</span>
+                <br/>
+                <span class="ignored-method-name">mobileloginloan1</span>
+                <br/>
+                <span class="ignored-method-name">mobileloginloan</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Loan_Department" class="panel">
@@ -269,12 +327,19 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">testpackage.xmlfile</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">demo</span>
-                <span class="method-start">14 ms</span>
+                <span class="method-name">seconddemo</span>
+                <span class="method-start">28 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testpackage.Prioritizingexample</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">APIlogin</span>
+                <span class="method-start">110 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">seconddemo</span>
-                <span class="method-start">17 ms</span>
+                <span class="method-name">webloginloan</span>
+                <span class="method-start">113 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

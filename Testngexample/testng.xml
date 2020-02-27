@@ -3,12 +3,26 @@
 
 <suite name="Loan Department">  
 <!-- test suite -->
-  <test thread-count="5" name="Personal loan">
+  <test thread-count="5" name=" loan">
 <!--   test module -->
     <classes>
 <!--     testcase classes -->
       <class name="testpackage.Basic"/>
-      <class name="testpackage.xmlfile"/>
+      <class name="testpackage.xmlfile">
+      <methods>
+      <include name="seconddemo"></include>
+      </methods>
+      </class>
     </classes>
   </test> <!-- Test -->
+  
+  <test name="Personal loan">
+  <classes>
+  <class name="testpackage.Prioritizingexample">
+  <methods>
+  <exclude name="mobilel.*"></exclude>
+  </methods>
+  </class>
+  </classes>
+  </test>
 </suite> <!-- Suite -->
